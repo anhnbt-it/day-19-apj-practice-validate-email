@@ -31,4 +31,13 @@ class ValidateEmailExampleTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("abc@hotmail.com")
+    void testABC() {
+        String regex = "abc@hotmail.com";
+        boolean expected = true;
+        boolean actual = emailValidate.validate(regex);
+        assertEquals(expected, actual);
+    }
+
 }
