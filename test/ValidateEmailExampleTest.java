@@ -58,4 +58,13 @@ class ValidateEmailExampleTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("@#abc@gmail.com")
+    void testSymbolUserName() {
+        String regex = "@#abc@gmail.com";
+        boolean expected = false;
+        boolean actual = emailValidate.validate(regex);
+        assertEquals(expected, actual);
+    }
+
 }
