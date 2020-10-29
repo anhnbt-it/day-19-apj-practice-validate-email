@@ -22,4 +22,13 @@ class ValidateEmailExampleTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("ab@yahoo.com")
+    void testAB() {
+        String regex = "ab@yahoo.com";
+        boolean expected = true;
+        boolean actual = emailValidate.validate(regex);
+        assertEquals(expected, actual);
+    }
+
 }
