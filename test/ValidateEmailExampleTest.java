@@ -49,4 +49,13 @@ class ValidateEmailExampleTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("ab@gmail.")
+    void testNoCom() {
+        String regex = "ab@gmail.";
+        boolean expected = false;
+        boolean actual = emailValidate.validate(regex);
+        assertEquals(expected, actual);
+    }
+
 }
