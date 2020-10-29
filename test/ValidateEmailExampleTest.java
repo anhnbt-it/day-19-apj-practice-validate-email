@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -62,9 +62,10 @@ class ValidateEmailExampleTest {
     @DisplayName("@#abc@gmail.com")
     void testSymbolUserName() {
         String regex = "@#abc@gmail.com";
-        boolean expected = false;
-        boolean actual = emailValidate.validate(regex);
-        assertEquals(expected, actual);
+//        boolean expected = false;
+//        boolean actual = emailValidate.validate(regex);
+//        assertEquals(expected, actual);
+        assertFalse(emailValidate.validate(regex));
     }
 
 }
