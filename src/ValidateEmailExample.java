@@ -11,6 +11,16 @@ public class ValidateEmailExample {
     private static Pattern pattern;
     private Matcher matcher;
 
+    /*
+     * ^: Bắt đầu chuỗi String
+     * [A-Za-z0-9]+: Email address phải bắt đầu bằng A-Z
+     * hoặc a-z hoặc 0-9 và có ít nhất 1 ký tự
+     * [A-Za-z0-9]*@: giống như trên và kết thúc bằng
+     * một ký hiệu @
+     * (\\.[A-Za-z0-9]+): Theo sau là domain (.com, .net)
+     * $: Kết thúc chuỗi
+     */
+
     private static final String EMAIL_REGEX = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$";
 
     public ValidateEmailExample() {
